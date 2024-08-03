@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="faqstyle.css">
+    <link rel="shortcut icon" type="image/jpg" href="..\favicon.jpg">
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+<div class='faq'>
+<div class="global-label">
+<div class="global-label-text">
+myncertbook<br>
+FAQs
+</div>
+
+</div>
+<!--1 question-->
+  <div class="faq-container">
+    <div class="faq-label">
+      <div class="faq-label-text">
+        How long it take to built myncertbook?
+      </div>
+      <div class="faq-label-icon">
+        <span class="material-icons">
+          expand_more
+        </span>
+      </div>
+
+    </div>
+    <div class="faq-answer ">
+      <div class="faq-answer-content">
+        So, this take me lot of time almost 11 days.
+
+      </div>
+
+    </div>
+  </div>
+  <!--2 question-->
+  <div class="faq-container">
+    <div class="faq-label">
+      <div class="faq-label-text">
+        What are the benefits of this website?
+      </div>
+      <div class="faq-label-icon">
+        <span class="material-icons">
+          expand_more
+        </span>
+      </div>
+       
+    </div>
+    <div class="faq-answer ">
+      <div class="faq-answer-content">
+        Here you can access ncert books from class 6th to 12th and some extra books(for 11th and 12th only) directly without scrolling to much. You can acces book of any subject and download it safely.
+
+      </div>
+
+    </div>
+  </div>
+  <!--3 question-->
+  <div class="faq-container">
+    <div class="faq-label">
+      <div class="faq-label-text">
+        When we get study material?
+      </div>
+      <div class="faq-label-icon">
+        <span class="material-icons">
+          expand_more
+        </span>
+      </div>
+
+    </div>
+    <div class="faq-answer ">
+      <div class="faq-answer-content">
+        Very soon.... my friend.
+
+      </div>
+
+    </div>
+  </div>
+  <!--4 question-->
+  <div class="faq-container">
+    <div class="faq-label">
+      <div class="faq-label-text">
+        Do we get any additional book rather than ncert?
+      </div>
+      <div class="faq-label-icon">
+        <span class="material-icons">
+          expand_more
+        </span>
+      </div>
+
+    </div>
+    <div class="faq-answer ">
+      <div class="faq-answer-content">
+        Yes, cs students of class 11th and 12th can access cs book by Sumita Arora, rest of classes will get additional books very soon..
+
+      </div>
+
+    </div>
+  </div>
+  <!--5 question-->
+  <div class="faq-container">
+    <div class="faq-label">
+      <div class="faq-label-text">
+        Humanities books are also available?
+      </div>
+      <div class="faq-label-icon">
+        <span class="material-icons">
+          expand_more
+        </span>
+      </div>
+
+    </div>
+    <div class="faq-answer ">
+      <div class="faq-answer-content">
+        yes..
+
+      </div>
+
+    </div>
+  </div>
+  <!--6 question-->
+  <div class="faq-container">
+    <div class="faq-label">
+      <div class="faq-label-text">
+        Can i give review?
+      </div>
+      <div class="faq-label-icon">
+        <span class="material-icons">
+          expand_more
+        </span>
+      </div>
+
+    </div>
+    <div class="faq-answer ">
+      <div class="faq-answer-content">
+        yes, in review corner given in the top of home page.
+
+      </div>
+
+    </div>
+  </div>
+  <!--7 question-->
+  <div class="faq-container">
+    <div class="faq-label">
+      <div class="faq-label-text">
+        What are the extraordinary feature of this website that make it unique from others?
+      </div>
+      <div class="faq-label-icon">
+        <span class="material-icons">
+          expand_more
+        </span>
+      </div>
+
+    </div>
+    <div class="faq-answer ">
+      <div class="faq-answer-content">
+        Here, you will get ncert books at one place, Motivational videos and Quotes corner are also there to keep you motivate.
+
+      </div>
+
+    </div>
+  </div>
+ 
+<!-- ask question -->
+<div class='ask'>
+     <div class="text">
+         If you have any other question than you may ask....
+     </div>
+</div>
+     <div class="con">
+        <button class="click"><a href ="contact.html" class="lin">Ask</a></button>
+    
+     </div>
+<!-- </div> -->
+     <script>
+         let faqLabel=document.querySelectorAll(".faq-label");
+
+faqLabel.forEach(item=>item.onclick=()=>{
+   //selektuje Answer
+   item.nextElementSibling.classList.toggle('active');
+   
+   
+   let labelIcon=item.lastElementChild;
+   let icons=labelIcon.lastElementChild;
+   icons.classList.toggle('rotate');
+ 
+   
+})
+
+
+     </script>
+</body>
+</html>

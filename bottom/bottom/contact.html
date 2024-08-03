@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contactstyle.css">
+    <link rel="shortcut icon" type="image/jpg" href="..\favicon.jpg">
+   
+
+</head>
+<body>
+    <section>
+        <div class="container">
+          <form  method="post" name="google-sheet" id="frmSubmit">
+
+          </label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+        
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <fieldset>
+            <legend>Category</legend>
+            <br>
+            <label for="student">Student</label>
+            <input type="radio"  name="student" >
+
+            <label for="teacher">Teacher</label>
+            <input type="radio"  name="teacher"  >
+
+            <label for="other">Other</label>
+            <input type="radio"  name="other" >
+          </fieldset>
+            <br>
+            <label for="emial">Email</label>
+            <input type="text" id="email" name="email" placeholder="your email" required>
+            
+            <label for="subject">Messsage</label>
+            <textarea id="message" name="message" placeholder="Write something.."  style="height:100px"></textarea>
+        
+            <input type="submit" value="Submit" id="btnSubmit">
+            <br>
+            <div class="msg" id="msg"></div>
+          </form>
+          
+        </div>
+        </section>
+
+        <script>
+      
+          const scriptURL = 'https://script.google.com/macros/s/AKfycbxsk9Fb8AxOByajecZ9lHGU5N-awSwQ3aE4D3jZ2eWYwJEgvK8cu17UTK9AT4qxoAycBA/exec'
+          const form = document.forms['google-sheet']
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => alert("Thank You very much..... now you may take exit from this page"))
+              .catch(error => console.error('Error!', error.message))
+          })
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        
+</body>
+</html>
